@@ -14,6 +14,7 @@
 		D981E57A1F38F77F0097F5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D981E5781F38F77F0097F5EC /* LaunchScreen.storyboard */; };
 		D981E5821F390F730097F5EC /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981E5811F390F730097F5EC /* Double.swift */; };
 		D981E5851F3910A20097F5EC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981E5841F3910A20097F5EC /* UIViewController.swift */; };
+		D981E5871F3915D70097F5EC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981E5861F3915D70097F5EC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D981E57B1F38F77F0097F5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D981E5811F390F730097F5EC /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		D981E5841F3910A20097F5EC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D981E5861F3915D70097F5EC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				D981E56F1F38F77F0097F5EC /* AppDelegate.swift */,
 				D981E5711F38F77F0097F5EC /* TipViewController.swift */,
+				D981E5861F3915D70097F5EC /* SettingsViewController.swift */,
 				D981E5731F38F77F0097F5EC /* Main.storyboard */,
 				D981E5761F38F77F0097F5EC /* Assets.xcassets */,
 				D981E5781F38F77F0097F5EC /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				D981E5721F38F77F0097F5EC /* TipViewController.swift in Sources */,
 				D981E5821F390F730097F5EC /* Double.swift in Sources */,
 				D981E5851F3910A20097F5EC /* UIViewController.swift in Sources */,
+				D981E5871F3915D70097F5EC /* SettingsViewController.swift in Sources */,
 				D981E5701F38F77F0097F5EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +319,7 @@
 				D981E5801F38F77F0097F5EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
