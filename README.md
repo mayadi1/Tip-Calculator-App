@@ -1,4 +1,4 @@
-# Pre-work - *Tip Calculator*
+# *Tip Calculator*
 
 **Tip Calculator** is a tip calculator application for iOS.
 
@@ -29,18 +29,13 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Project Analysis
 
-**Question 1**: "What are your reactions to the iOS app development platform so far? How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood? (It might give you some ideas if you right-click on the Storyboard and click Open As->Source Code")
+**Question 1**: "How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood? (It might give you some ideas if you right-click on the Storyboard and click Open As->Source Code")
 
-**Answer:** [Enter your answer here in a paragraph or two].
-
-Question 2: "Swift uses [Automatic Reference Counting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID49) (ARC), which is not a garbage collector, to manage memory. Can you explain how you can get a strong reference cycle for closures? (There's a section explaining this concept in the link, how would you summarize as simply as possible?)"
-
-**Answer:** [Enter your answer here in a paragraph or two].
-
+**Answer:** [IBOUTLET allows you to change properties of a control while the action is used for an event to trigger code basically do something. So you would only use an IBOUTLET when you wanted to change the way something looked i.e the Label you use an outlet since you want to change it's text property you could change it's size, colour, font etc but you would need to turn this into an outlet before you could do this on the other hand you would use an action when you want something to be triggered when the user presses something which in this case is changing the text in the label when you press the button you are using the action to activate a trigger event what this then does is it uses the IBOUTLET you declared before and changes the text property with the value returned from the method.]
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Mohamed Ayadi]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
