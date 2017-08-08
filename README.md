@@ -4,7 +4,7 @@
 
 Submitted by: **Mohamed Ayadi**
 
-Time spent: **1** hour spent in total
+Time spent: **2** hour spent in total
 
 ## User Stories
 
@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/3qkNjWd' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](tipCalculatorWalkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
