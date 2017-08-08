@@ -31,9 +31,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 **Question 1**: "How would you describe outlets and actions to another developer? Bonus: any idea how they are being implemented under the hood? (It might give you some ideas if you right-click on the Storyboard and click Open As->Source Code")
 
-**Answer:** [IBOUTLET allows you to change properties of a control while the action is used for an event to trigger code basically do something. So you would only use an IBOUTLET when you wanted to change the way something looked i.e the Label you use an outlet since you want to change it's text property you could change it's size, colour, font etc but you would need to turn this into an outlet before you could do this on the other hand you would use an action when you want something to be triggered when the user presses something which in this case is changing the text in the label when you press the button you are using the action to activate a trigger event what this then does is it uses the IBOUTLET you declared before and changes the text property with the value returned from the method.].
+**Answer:** [IBOUTLET allows you to change properties of a control while the action is used for an event to trigger code basically do something. So you would only use an IBOUTLET when you wanted to change the way something looked i.e the Label you use an outlet since you want to change it's text property you could change it's size, colour, font etc but you would need to turn this into an outlet before you could do this on the other hand you would use an action when you want something to be triggered when the user presses something which in this case is changing the text in the label when you press the button you are using the action to activate a trigger event what this then does is it uses the IBOUTLET you declared before and changes the text property with the value returned from the method.]
 
-**Answer:** [Enter your answer here in a paragraph or two].
 ## License
 
     Copyright [2017] [Mohamed Ayadi]
