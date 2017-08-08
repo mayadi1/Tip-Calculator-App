@@ -35,7 +35,7 @@
                                 <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-aY-oJY">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-aY-oJY">
                                 <rect key="frame" x="47" y="233" width="281" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -189,6 +189,7 @@
                         <outlet property="billTextField" destination="ndt-hs-CzV" id="2FG-TA-HeH"/>
                         <outlet property="customTipPercentLabel" destination="vmd-Mh-hly" id="Ouk-qY-CNm"/>
                         <outlet property="customTipResultLabel" destination="pb0-Eu-F5u" id="YcZ-VY-8PJ"/>
+                        <outlet property="resultsView" destination="Bb7-aY-oJY" id="W5x-t4-Ivg"/>
                         <outletCollection property="tipResults" destination="kHQ-41-Ijj" collectionClass="NSMutableArray" id="dHQ-X6-uTi"/>
                         <outletCollection property="tipResults" destination="8rc-a3-02k" collectionClass="NSMutableArray" id="lNq-Dm-38D"/>
                         <outletCollection property="tipResults" destination="bOj-JZ-Ta9" collectionClass="NSMutableArray" id="dME-bQ-QeG"/>

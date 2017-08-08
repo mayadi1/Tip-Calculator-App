@@ -18,6 +18,7 @@ class TipViewController: UIViewController{
     @IBOutlet weak var customTipResultLabel: UILabel!
     @IBOutlet var tipPercentLabels: [UILabel]!
     @IBOutlet var totalValuesLabels: [UILabel]!
+    @IBOutlet weak var resultsView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
@@ -34,6 +35,7 @@ class TipViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultsView.layer.cornerRadius = 10
         self.hideKeyboard()
         billTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
