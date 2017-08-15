@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import KJCircularSlider
 
-class TipViewController: UIViewController, UITextFieldDelegate{
+class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSliderDelegate{
+    @IBOutlet weak var curveSliderLarge: KJCircularSlider!
     
     @IBOutlet var tipResults: [UILabel]!
     @IBOutlet weak var billTextField: UITextField!
@@ -58,7 +60,9 @@ class TipViewController: UIViewController, UITextFieldDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultsView.layer.cornerRadius = 10
+        curveSliderLarge.KJCircularDelegate = self
+         resultsView.layer.cornerRadius = 10
+        curveSliderLarge.layer.cornerRadius = 10
         self.hideKeyboard()
         billTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
@@ -94,16 +98,6 @@ class TipViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    @IBAction func sliderValueChanged(sender: UISlider) {
-        let currentValue = Double(sender.value).roundTo(places: 2)
-        customTipPercentLabel.text = "\(currentValue)%"
-        self.customTipPercentLabelValue = currentValue
-        if(!(billTextField.text?.isEmpty)!){
-            customTipResultLabel.text = "$\((Double(billTextField.text!)! * (currentValue / 100)).roundTo(places: 2))"
-            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2))"
-        }
-    }
-    
     func setTipPercentLables(){
         for i in 0..<3 {
             tipPercentLabels[i].text = "\(tipPercentage[i])%"
@@ -112,6 +106,16 @@ class TipViewController: UIViewController, UITextFieldDelegate{
     
     override func viewWillDisappear(_ animated: Bool) {
         UserDefaults.standard.set(Date(), forKey: "disappearTime")
+    }
+    
+    func getPercentage(circularSliderInstance: KJCircularSlider, percentValue: Float) {
+        let currentValue = Double(percentValue).roundTo(places: 2)
+        customTipPercentLabel.text = "\(currentValue)%"
+        self.customTipPercentLabelValue = currentValue
+        if(!(billTextField.text?.isEmpty)!){
+            customTipResultLabel.text = "$\((Double(billTextField.text!)! * (currentValue / 100)).roundTo(places: 2))"
+            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2))"
+        }
     }
 }
 
