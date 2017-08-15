@@ -21,7 +21,8 @@ class TipViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var resultsView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
-         let defaults = UserDefaults.standard
+        navigationController?.navigationBar.backgroundColor = UIColor.orange
+        let defaults = UserDefaults.standard
         if let savedDate = UserDefaults.standard.object(forKey: "disappearTime") as? Date{
             let calendar = Calendar.current
             let date = Date()

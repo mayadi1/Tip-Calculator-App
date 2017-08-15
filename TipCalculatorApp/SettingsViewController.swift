@@ -11,7 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet var percentageAmountsTextFields: [UITextField]!
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.backgroundColor = UIColor.orange
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.hideKeyboard()
         let defaults = UserDefaults.standard
