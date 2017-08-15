@@ -83,11 +83,11 @@ class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSlider
         if(!(billTextField.text?.isEmpty)!){
             UserDefaults.standard.set(Date(), forKey: "disappearTime")
             for i in 0..<3 {
-                tipResults[i].text = "$\((Double(billTextField.text!)! * (tipPercentage[i] / 100)).roundTo(places: 2))"
-                customTipResultLabel.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100)).roundTo(places: 2))"
-                totalValuesLabels[i].text = "$\((Double(billTextField.text!)! * (tipPercentage[i] / 100) + Double(billTextField.text!)!).roundTo(places: 2))"
+                tipResults[i].text = "$\((Double(billTextField.text!)! * (tipPercentage[i] / 100)).roundTo(places: 2).formattedWithSeparator)"
+                customTipResultLabel.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100)).roundTo(places: 2).formattedWithSeparator)"
+                totalValuesLabels[i].text = "$\((Double(billTextField.text!)! * (tipPercentage[i] / 100) + Double(billTextField.text!)!).roundTo(places: 2).formattedWithSeparator)"
             }
-            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2))"
+            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2).formattedWithSeparator)"
         }else{
             for i in 0..<3 {
                 tipResults[i].text = "0"
@@ -113,8 +113,8 @@ class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSlider
         customTipPercentLabel.text = "\(currentValue)%"
         self.customTipPercentLabelValue = currentValue
         if(!(billTextField.text?.isEmpty)!){
-            customTipResultLabel.text = "$\((Double(billTextField.text!)! * (currentValue / 100)).roundTo(places: 2))"
-            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2))"
+            customTipResultLabel.text = "$\((Double(billTextField.text!)! * (currentValue / 100)).roundTo(places: 2).formattedWithSeparator)"
+            totalValuesLabels.last?.text = "$\((Double(billTextField.text!)! * (customTipPercentLabelValue / 100) + Double(billTextField.text!)!).roundTo(places: 2).formattedWithSeparator)"
         }
     }
 }
