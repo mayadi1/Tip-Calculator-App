@@ -4,7 +4,7 @@
 
 Submitted by: **Mohamed Ayadi**
 
-Time spent: **2** hour spent in total
+Time spent: **3** hour spent in total
 
 ## User Stories
 
