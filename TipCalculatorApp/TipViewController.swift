@@ -13,6 +13,7 @@ class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSlider
     @IBOutlet weak var curveSliderLarge: KJCircularSlider!
     
     @IBOutlet var tipResults: [UILabel]!
+    @IBOutlet weak var cutomeTipView: UIView!
     @IBOutlet weak var billTextField: UITextField!
     var tipPercentage: [Double] = [15,20,25]
     var customTipPercentLabelValue : Double = 30
@@ -21,8 +22,7 @@ class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSlider
     @IBOutlet var tipPercentLabels: [UILabel]!
     @IBOutlet var totalValuesLabels: [UILabel]!
     @IBOutlet weak var resultsView: UIView!
-    
-    override func viewWillAppear(_ animated: Bool) {
+     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.backgroundColor = UIColor.orange
         let defaults = UserDefaults.standard
         if let savedDate = UserDefaults.standard.object(forKey: "disappearTime") as? Date{
@@ -62,8 +62,8 @@ class TipViewController: UIViewController, UITextFieldDelegate, KJCircularSlider
         super.viewDidLoad()
         curveSliderLarge.KJCircularDelegate = self
          resultsView.layer.cornerRadius = 10
-        curveSliderLarge.layer.cornerRadius = 10
-        self.hideKeyboard()
+        cutomeTipView.layer.cornerRadius = 10
+         self.hideKeyboard()
         billTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
